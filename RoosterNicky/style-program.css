@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .navleft {
+    width: 100%;
+    background-color: #600f79;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    transition: background .3s;
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar .navright a{
+      float:right;
+  }
+  
+  .active {
+    background-color: #9f43bb;
+  }
+
+  .navbar a:hover {
+    transition: background .3s;
+    background-color: #0000003b;
+  }
+
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
