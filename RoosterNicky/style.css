@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+  }
+
+.header{
+  background: url("assets/Background_Image_Landing.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+.header .container{
+  position: relative;
+  top: 12vw;
+  text-align: center;
+}
+
+.container #slogan{
+  display: block;
+  padding: 50px 50px;
+  margin: auto;
+  max-width:80%; 
+  height: auto;
+}
+
+.container #logowhite{
+  display: block;
+  height: 6vw;
+  min-height: 70px;
+  margin: auto;
+}
+
+.text{
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-button{
+  display: inline-block;
+  margin: 20px 20px;
+  padding: 1rem 3rem;
+  width: 250px;
+  min-height: 2vh;
+
+  border: none;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+  border-radius: 100px;
+  color: white;
+  background-color: transparent;
+  border: 5px solid white;
+}
+
+.modal-button:hover{
+  transition: background .3s;
+  color: #8833a2;
+  background-color: white;
+  cursor: pointer;
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  text-align: center;
+  background-color: white;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.popup-buttons{
+  margin: 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.confirm {
+  background-color: blueviolet;
+  color: white;
+}
+
+.preview{
+  background: url("assets/Landing_Flat_Design.png");
+  background-size: cover;
+  background-attachment: local;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+.preview .desc {
+  position: absolute;
+  left: 70px;
+  top: 108vh;
+}
+
+.preview h2{
+  font-size: 10vmin;
+  font-weight: 700;
+  color: #86459b;
+}
+
+.info{
+  margin: auto;
+  padding-top: 7vh;
+  position: relative;
+  background-color: #f6f4f7;
+  text-align: center;
+}
+
+.info #howto {
+  margin: 0;
+  top: 50%;
+  padding: 5vh;
+  font-size: 48px;
+}
+
+.icon{
+  height: 350px;
+  min-height: 10%;
+  padding: 5vw;
+  margin: 0;
+  position: relative;
+}
+
+/* .preview .flat {
+  float: right;
+  bottom: 90%;
+  margin: 0, auto;
+  height: 70%;
+  width: 40%;
+}
+#table{
+  margin-right: 2vw;
+} */

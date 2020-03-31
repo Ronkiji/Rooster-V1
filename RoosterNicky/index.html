@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="animate.css" rel="stylesheet" type="text/css">
+
+    <title>test</title>
+</head>
+
+<body>
+    <div class=header>
+        <div class="container">
+            <img id="logowhite" src="assets/Rooster_White.png">
+            <img id="slogan" src="assets/Slogan.png">
+            <br>
+            <button class="modal-button text" id="login-button">LOGIN</button>
+            <button class="modal-button text" id="register-button">REGISTER</button>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="login-popup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content text">
+            <span class="close">&times;</span>
+            <form>
+                <p><strong>Login</strong></p>
+                <!--Login Title-->
+                <br>
+                <input type="text" id="lusername" placeholder="Username" required>
+                <br><br>
+                <input type="password" id="luserpw" placeholder=Password required>
+                <br><br>
+                <button class="text popup-buttons confirm" id="confirm-login">Confirm</button>      
+                <button class="text popup-buttons cancel">Cancel</button>          
+            </form>
+        </div>
+    </div>
+
+    <div id="register-popup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content text">
+            <span class="close">&times;</span>
+            <form>
+                <p><strong>Register</strong></p>
+                <br>
+                <input type="text" id="rname" placeholder="Name" required>
+                <br><br>
+                <input type="text" id="rusername" placeholder="Username" required>
+                <br><br>
+                <input type="password" id="ruserpw" placeholder="Password" required>
+                <br><br>
+                <input type="password" id="rconfirmpw" placeholder="Confirm Password" required>
+                <br><br>
+                <button class="text popup-buttons confirm" id="confirm-register">Confirm</button>
+                <button class="text popup-buttons cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="preview">
+        <h2 class="text desc">Lorem Ipsum</h2>
+    </div>
+
+    <div class="rooster-workings">
+        <div class="info">
+            <h1 class="text" id="howto">How Rooster's Organization Works</h1>
+            <img class="icon" src="assets/Start_Project.png">
+            <img class="icon" src="assets/Set_Reminders.png">
+            <img class="icon" src="assets/Stay_Track.png">
+        </div>
+    </div>
+</body>
+
+
+
+<script type="text/javascript" src="main.js"></script>
+
+</html>
