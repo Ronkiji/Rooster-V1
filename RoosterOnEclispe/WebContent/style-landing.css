@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+  }
+
+.header{
+  background: url("assets/Background_Image_Landing.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+.header .container{
+  position: relative;
+  top: 12vw;
+  text-align: center;
+}
+
+.container #slogan{
+  display: block;
+  padding: 50px 50px;
+  margin: auto;
+  max-width:80%; 
+  height: auto;
+}
+
+.container #logowhite{
+  display: block;
+  height: 6vw;
+  min-height: 70px;
+  margin: auto;
+}
+
+.text{
+  font-family: Helvetica, Arial, sans-serif; /*MOVE TO BODY/HTML*/
+}
+
+.modal-title{
+  text-align: center;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.modal #logo-icon{
+  width: 20%;
+  height: auto;
+}
+
+.modal #logo-word{
+  width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .modal-title {
+    font-size: 20px;
+  }
+}
+
+.modal-button{
+  display: inline-block;
+  margin: 20px 20px;
+  padding: 1rem 3rem;
+  width: 250px;
+  min-height: 2vh;
+
+  border: none;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+  border-radius: 100px;
+  color: white;
+  background-color: transparent;
+  border: 5px solid white;
+}
+
+.modal-button:hover{
+  transition: background .3s;
+  color: #8833a2;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.popup-buttons{
+  font-size: 90%;
+  font-weight: 700;
+  width: 40%;
+  margin: 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.confirm {
+  background-color: #8833a2;
+  color: white;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-inputs label {
+  position: absolute;
+  top: 60;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal-inputs input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+}
+
+.modal-inputs input:invalid {
+  outline: 0;
+}
+
+.modal-inputs input:focus,
+input:valid {
+  border-color: #8833a2;
+}
+
+input:focus~label,
+input:valid~label {
+  font-size: 18px;
+  transform: translate(0px, -18px);
+  color: #8833a2;
+}
+
+.preview .desc {
+  left: 3vw;
+  top: 104vh;
+  position: absolute;
+}
+
+.preview h2{
+  font-weight: 700;
+  color: #86459b;
+  font-size: 90px;
+}
+
+@media screen and (max-width: 1360px) {
+  .preview h2 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .preview h2 {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .preview h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .preview h2 {
+    font-size: 25px;
+  }
+}
+
+.preview img{
+  width: 100%;
+  height: auto;
+}
+
+.info{
+  margin: auto;
+  padding-top: 7vh;
+  position: relative;
+  background-color: #f6f4f7;
+  text-align: center;
+}
+
+.info #howto {
+  margin: 0;
+  top: 50%;
+  padding: 5vh;
+  font-size: 48px;
+}
+
+.icon{
+  max-width: 300px;
+  padding: 5vw;
+  margin: 0;
+  position: relative;
+}
