@@ -128,7 +128,7 @@ body, html {
 }
 
 .confirm {
-  background-color: blueviolet;
+  background-color: #8833a2;
   color: white;
 }
 
@@ -176,14 +176,14 @@ body, html {
 
 .modal-inputs input:focus,
 input:valid {
-  border-color: blueviolet;
+  border-color: #8833a2;
 }
 
 input:focus~label,
 input:valid~label {
   font-size: 18px;
   transform: translate(0px, -18px);
-  color: blueviolet;
+  color: #8833a2;
 }
 
 .preview .desc {
