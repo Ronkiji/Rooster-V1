@@ -85,7 +85,7 @@ body, html {
 }
 
 .modal-button:hover{
-  transition: background .3s;
+  transition: background .5s;
   color: #8833a2;
   background-color: white;
   cursor: pointer;

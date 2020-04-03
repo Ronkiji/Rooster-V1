@@ -29,22 +29,23 @@
         <div class="modal-content text">
             <span class="close">&times;</span>
             <br><br>
+            <!--action="Registration" method="post"-->
             <form>
                 <img id="logo-word" src="assets/Rooster_Main_Logo.png">
                 <!--Login Title-->
                 <br><br><br>
                 <div class="modal-inputs">
-                    <input type="text" id="lusername" required>
+                    <input type="text" id="lusername" name="lusername" pattern="[a-zA-Z0-9]{6,25}" required>
                     <label for="lusername">Username</label>
                 </div>
                 <br><br><br>
                 <div class="modal-inputs">
-                    <input type="password" id="luserpw" required>
+                    <input type="password" id="luserpw" name="luserpw" pattern="{8,30}" required>
                     <label for="luserpw">Password</label>
                 </div>
                 <br><br>
-                <button class="text popup-buttons confirm" id="confirm-login">Confirm</button>
-                <button class="text popup-buttons cancel">Cancel</button>
+                 <input type="submit" class="text popup-buttons confirm" id="confirm-login" value="Confirm">
+                <input type="reset" class="text popup-buttons cancel" value="Cancel">
             </form>
         </div>
     </div>
@@ -53,35 +54,35 @@
         <!-- Modal content -->
         <div class="modal-content text">
             <span class="close">&times;</span>
-            <form>
+            <form action="Registration" method="post">
                 <br><br><br>
                 <img id="logo-icon" src="assets/Rooster_Icon_Logo.png">
                 <br><br>
                 <h1 class="text modal-title">CREATE YOUR ACCOUNT TODAY!</h1>
                 <br><br>
                 <div class="modal-inputs">
-                    <input type="text" id="rname" required>
-                    <label for="rname">Name</label> <!--FORM VALIDATE-->
+                    <input type="text" id="rname" name="rname" pattern="[a-zA-Z]{3,10}" data-toggle="tooltip" data-placement="top" title="English alphabet only, 3-10 characters" required>
+                    <label for="rname">Name</label> 
+                </div>
+                <br><br><br>
+                <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="English alphabet and numbers only, 6-25 characters.">
+                    <input type="text" id="rusername" name="rusername" pattern="[a-zA-Z0-9]{6,25}" required>
+                    <label for="rusername">Username</label>
+                </div>
+                <br><br><br>
+                <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="8-30 characters"> 
+                    <input type="password" id="ruserpw" name="ruserpw" pattern="{8,30}" required>
+                    <label for="ruserpw">Password</label>
                 </div>
                 <br><br><br>
                 <div class="modal-inputs">
-                    <input type="text" id="rusername" required>
-                    <label for="rusername">Username</label> <!--FORM VALIDATE-->
-                </div>
-                <br><br><br>
-                <div class="modal-inputs">
-                    <input type="password" id="ruserpw" required>
-                    <label for="ruserpw">Password</label> <!--FORM VALIDATE-->
-                </div>
-                <br><br><br>
-                <div class="modal-inputs">
-                    <input type="password" id="rconfirmpw" required>
+                    <input type="password" id="rconfirmpw" name="rconfirmpw" pattern="{8,30}" required>
                     <label for="rconfirmpw">Confirm Password</label>
                 </div>
                 <br><br>
-                <button class="text popup-buttons confirm" id="confirm-register">Confirm</button>
-                <button class="text popup-buttons cancel">Cancel</button>
                 <br>
+                <input type="submit" class="text popup-buttons confirm" id="confirm-register" value="Confirm">
+                <input type="reset" class="text popup-buttons cancel" value="Cancel">
             </form>
         </div>
     </div>
@@ -101,6 +102,6 @@
     </div>
 </body>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js-landing.js"></script>
 
 </html>
