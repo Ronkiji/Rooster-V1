@@ -6,6 +6,7 @@
 body, html {
     height: 100%;
     width: 100%;
+    font-family:  Helvetica, Arial, sans-serif;
   }
 
 .header{
@@ -21,6 +22,8 @@ body, html {
   position: relative;
   top: 12vw;
   text-align: center;
+  height: 80%;
+  width: auto;
 }
 
 .container #slogan{
@@ -31,15 +34,32 @@ body, html {
   height: auto;
 }
 
+@media screen and (min-width: 800px) and (max-height: 700px) {
+  .container #slogan {
+    width: 30%; 
+    height: auto;
+  }
+  .modal-button {
+    margin: 10px 10px;
+    padding: 0.4rem 0.5rem;
+    font-size: 20px;
+    border: 3px solid white;
+    position: block;
+  }
+  .container #slogan {
+    padding-top: 30px;
+    padding: 20px 50px;
+  }
+  .header {
+    min-height: 650px;
+  }
+}
+
 .container #logowhite{
   display: block;
   height: 6vw;
   min-height: 70px;
   margin: auto;
-}
-
-.text{
-  font-family: Helvetica, Arial, sans-serif; /*MOVE TO BODY/HTML*/
 }
 
 .modal-title{
@@ -49,13 +69,13 @@ body, html {
   font-weight: 700;
 }
 
-.modal #logo-icon{
-  width: 20%;
+.modal #logo-word{
+  width: 70%;
   height: auto;
 }
 
-.modal #logo-word{
-  width: 60%;
+.modal #logo-icon{
+  width: 20%;
   height: auto;
 }
 
@@ -72,8 +92,6 @@ body, html {
   width: 250px;
   min-height: 2vh;
 
-  border: none;
-
   text-align: center;
   font-weight: 700;
   font-size: 30px;
@@ -82,6 +100,23 @@ body, html {
   color: white;
   background-color: transparent;
   border: 5px solid white;
+}
+
+@media screen and (max-height: 600px) {
+  .modal-button {
+    margin: 10px 10px;
+    padding: 0.4rem 0.5rem;
+    font-size: 20px;
+    border: 3px solid white;
+    position: block;
+  }
+  .container #slogan{
+    padding-top: 30px;
+    padding: 20px 50px;
+  }
+  .header{
+    min-height: 650px;
+  }
 }
 
 .modal-button:hover{
@@ -116,6 +151,14 @@ body, html {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
+.error-msg{
+  word-wrap: break-word;
+  font-size: 1.5vw;
+  font-style: italic;
+  font-weight: bold;
+  color: #bc2626;
+}
+
 .popup-buttons{
   font-size: 90%;
   font-weight: 700;
@@ -125,6 +168,12 @@ body, html {
   border: none;
   border-radius: 100px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 950px){
+  .popup-buttons {
+    font-size: 1.3vw;
+  }
 }
 
 .confirm {
@@ -186,65 +235,28 @@ input:valid~label {
   color: #8833a2;
 }
 
-.preview .desc {
-  left: 3vw;
-  top: 104vh;
-  position: absolute;
-}
-
-.preview h2{
-  font-weight: 700;
-  color: #86459b;
-  font-size: 90px;
-}
-
-@media screen and (max-width: 1360px) {
-  .preview h2 {
-    font-size: 70px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .preview h2 {
-    font-size: 55px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .preview h2 {
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .preview h2 {
-    font-size: 25px;
-  }
-}
-
-.preview img{
+.info-screen{
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-color: #e6b5f5;
 }
 
-.info{
-  margin: auto;
-  padding-top: 7vh;
-  position: relative;
-  background-color: #f6f4f7;
-  text-align: center;
+.text-container{
+  padding: 30px;
 }
 
-.info #howto {
-  margin: 0;
-  top: 50%;
-  padding: 5vh;
-  font-size: 48px;
+.info-screen img {
+  height: 100%;
+  width: auto;
+  float: right;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.icon{
-  max-width: 300px;
-  padding: 5vw;
-  margin: 0;
-  position: relative;
+@media screen and (max-width: 1600px) {
+  .info-screen img {
+    float: center;
+    width: 90%;
+    height: auto;
+  }
 }

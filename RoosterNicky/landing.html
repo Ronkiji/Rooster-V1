@@ -18,15 +18,15 @@
             <a href="home.html"><img id="logowhite" src="assets/Rooster_White.png"></a>
             <img id="slogan" src="assets/Slogan.png">
             <br>
-            <button class="modal-button text" id="login-button">LOGIN</button>
-            <button class="modal-button text" id="register-button">REGISTER</button>
+            <button class="modal-button" id="login-button">LOGIN</button>
+            <button class="modal-button" id="register-button">REGISTER</button>
         </div>
     </div>
 
     <!-- The Modal -->
     <div id="login-popup" class="modal">
         <!-- Modal content -->
-        <div class="modal-content text">
+        <div class="modal-content">
             <span class="close">&times;</span>
             <br><br>
             <!--action="Registration" method="post"-->
@@ -43,34 +43,38 @@
                     <input type="password" id="luserpw" name="luserpw" pattern="{8,30}" required>
                     <label for="luserpw">Password</label>
                 </div>
-                <br><br>
-                 <input type="submit" class="text popup-buttons confirm" id="confirm-login" value="Confirm">
-                <input type="reset" class="text popup-buttons cancel" value="Cancel">
+                <br>
+                <div class="error-msg" id="error-login"></div>
+                <br>
+                <input type="submit" class="popup-buttons confirm" id="confirm-login" value="Confirm">
+                <input type="reset" class="popup-buttons cancel" id="confirm-cancel" value="Cancel">
             </form>
         </div>
     </div>
 
     <div id="register-popup" class="modal">
         <!-- Modal content -->
-        <div class="modal-content text">
+        <div class="modal-content">
             <span class="close">&times;</span>
             <form action="Registration" method="post">
                 <br><br><br>
                 <img id="logo-icon" src="assets/Rooster_Icon_Logo.png">
                 <br><br>
-                <h1 class="text modal-title">CREATE YOUR ACCOUNT TODAY!</h1>
+                <h1 class="modal-title">CREATE YOUR ACCOUNT TODAY!</h1>
                 <br><br>
                 <div class="modal-inputs">
-                    <input type="text" id="rname" name="rname" pattern="[a-zA-Z]{3,10}" data-toggle="tooltip" data-placement="top" title="English alphabet only, 3-10 characters" required>
-                    <label for="rname">Name</label> 
+                    <input type="text" id="rname" name="rname" pattern="[a-zA-Z]{3,10}" data-toggle="tooltip"
+                        data-placement="top" title="English alphabet only, 3-10 characters" required>
+                    <label for="rname">Name</label>
                 </div>
                 <br><br><br>
-                <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="English alphabet and numbers only, 6-25 characters.">
+                <div class="modal-inputs" data-toggle="tooltip" data-placement="top"
+                    title="English alphabet and numbers only, 6-25 characters.">
                     <input type="text" id="rusername" name="rusername" pattern="[a-zA-Z0-9]{6,25}" required>
                     <label for="rusername">Username</label>
                 </div>
                 <br><br><br>
-                <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="8-30 characters"> 
+                <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="8-30 characters">
                     <input type="password" id="ruserpw" name="ruserpw" pattern="{8,30}" required>
                     <label for="ruserpw">Password</label>
                 </div>
@@ -79,22 +83,26 @@
                     <input type="password" id="rconfirmpw" name="rconfirmpw" pattern="{8,30}" required>
                     <label for="rconfirmpw">Confirm Password</label>
                 </div>
-                <br><br>
                 <br>
-                <input type="submit" class="text popup-buttons confirm" id="confirm-register" value="Confirm">
-                <input type="reset" class="text popup-buttons cancel" value="Cancel">
+                <div class="error-msg" id="error-registration"></div>
+                <br>
+                <input type="submit" class="popup-buttons confirm" id="confirm-register" value="Confirm">
+                <input type="reset" class="popup-buttons cancel" value="Cancel">
             </form>
         </div>
     </div>
 
-    <div class="preview">
-        <img id="flat" src="assets/Landing_Flat_Design.png">
-        <h2 class="text desc">Lorem Ipsum</h2>
+    <div class="info-screen">
+        <div class="text-container">
+            <h1>EHEHEHEHEHE</h1>
+            <p>koesnfo;pkdnsfo;pkdlsgn;lkdfngdl;ksfgn;ldkfsgn;lkdgndl;kfsgn</p>
+        </div>
+        <img class="test" src="assets/Flat_Design_Transparent.png">
     </div>
 
     <div class="rooster-workings">
         <div class="info">
-            <h1 class="text" id="howto">How Rooster's Organization Works</h1>
+            <h1 id="howto">How Rooster's Organization Works</h1>
             <img class="icon" src="assets/Start_Project.png">
             <img class="icon" src="assets/Set_Reminders.png">
             <img class="icon" src="assets/Stay_Track.png">
