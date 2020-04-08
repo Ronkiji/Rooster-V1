@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+@font-face {
+  font-family: Ebrima;
+  src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
 body, html {
     height: 100%;
     width: 100%;
-    font-family:  Helvetica, Arial, sans-serif;
+    font-family:  Ebrima, Helvetica, sans-serif;
+    scroll-behavior: smooth;
   }
 
 .header{
@@ -120,7 +126,7 @@ body, html {
 }
 
 .modal-button:hover{
-  transition: background .5s;
+  transition: background .35s;
   color: #8833a2;
   background-color: white;
   cursor: pointer;
@@ -235,28 +241,156 @@ input:valid~label {
   color: #8833a2;
 }
 
-.info-screen{
-  width: 100%;
-  height: 100%;
-  background-color: #e6b5f5;
+.intro{
+  position: absolute;
+  color: #26282a;
+  text-align: center;
 }
 
-.text-container{
+.intro-text{
+  display: inline-block;
+  width: 25%;
+  padding: 50px 35px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.intro div h1{
+  font-size: 50px;
+}
+
+.intro div h2{
+  padding-bottom: 25px;
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.intro div p{
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.rooster-steps{
+  padding-bottom: 50px;
+  background-color: #f8f7f8;
+}
+
+.rooster-steps h1{
+  padding: 50px;
+}
+
+.rooster-steps .step{
   padding: 30px;
+  display: inline-block;
 }
 
-.info-screen img {
-  height: 100%;
-  width: auto;
-  float: right;
-  padding-left: 30px;
+.step img{
+  width: 25%;
+  padding: 15px;
+}
+
+.step .beg {
+  text-transform: lowercase;
+  font-size: 24px;
+}
+
+.step span{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.ui-intro .title{
+  padding-top: 50px;
+}
+
+.ui-intro .title p{
+  padding-top: 15px;
+}
+
+.ui-intro img{
+  width: 350px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ui-intro div{
+  padding: 30px 10px;
+}
+
+.ui-intro div div{
+  text-align: left;
+  display: inline-block;
+  width: 25%; 
+  vertical-align: middle;
+}
+.ui-intro div h2{
+  padding: 10px 0;   
+}
+
+.ui-intro div .left{
+  padding-right: 50px;
+}
+
+.ui-intro div .right{
+  padding-left: 50px;
+}
+
+.developers{
+  padding: 50px;
+}
+
+.developers .title p{
+  padding-top: 15px;
+}
+
+.developers .dev{
+  display: inline-block;
+  padding: 20px;
+}
+
+.developers .dev img{
+  width: 150px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.developers .dev div{
+  display: inline-block;
+  text-align: left;
+}
+
+.developers .dev h2{
+  padding-bottom: 0;
+}
+
+.start{
+  background-color: #600f79;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.start span{
+  color: white;
   padding-right: 30px;
+  font-size: 20px;
 }
 
-@media screen and (max-width: 1600px) {
-  .info-screen img {
-    float: center;
-    width: 90%;
-    height: auto;
-  }
+.start a{
+  color: white;
+  background-color: #953bb1;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.start a:hover{
+  transition: background .35s;
+  background-color: #ad4dca;
 }
