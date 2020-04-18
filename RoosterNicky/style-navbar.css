@@ -3,18 +3,24 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Ebrima;
+  src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}  
+
 body, html {
   background: #fbfafc;
   height: 100%;
   width: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Ebrima, Helvetica, sans-serif;
 }
 
 nav {
   width: 100%;
   position: fixed;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Ebrima, Helvetica, sans-serif;
   text-align: center;
+  z-index: 9999;
 }
 
 .navbar-logo {
@@ -63,6 +69,7 @@ nav {
 .navbar ul li img{
   height: 40px;
   width: auto;
+  border-radius: 100px;
 }
 
 .navbar li {
