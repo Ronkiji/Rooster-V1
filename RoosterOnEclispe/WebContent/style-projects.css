@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Ebrima;
+    src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family:  Ebrima, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fbfafc;
+}
+
+.projects-div{
+    display: block;
+    position: relative;
+    top: 100px;
+    padding-left: 50px;
+    width: 850px;
+}
+
+.projects-div h1{
+    position: relative;
+    font-size: 60px;
+    width: 1000px;
+}
+
+.size{
+    margin-top: 15px;
+    height: 730px;
+    width: 850px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #8833a2;
+} 
+
+
+.proj a{
+    color: black;
+    cursor: pointer; 
+    width: 51%;
+    height: 20px;
+}
+
+.card {
+    position: relative;
+    margin: 20px 0;
+    width: 810px;
+    height: 105px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.card div{
+    display: inline-block;
+}
+
+.project-color{
+    height: 65px;
+    width: 65px;
+    background-color: #8833a2;
+    border-radius: 100px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.card h2{
+    font-size: 40px;
+    margin-left: 50px;
+    font-weight: normal;
+    position: relative;
+    top: 3px;
+}
+
+.button{
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    float: right;
+    position: relative;
+}
+
+.button input {
+    width: 55px;
+    height: 55px;
+}
+
+.options {
+    position: absolute;
+    top: 190px;
+    left: 950px;
+    width: 45%;
+    height: 750px;
+}
+
+.interaction-option{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 188.5px;
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.329);
+    text-decoration: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.interaction-option h2{
+    position: relative;
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.interaction-option p{
+    position: relative;
+    margin-top: 0.5vh;
+    font-weight: 500;
+    text-align: left;
+    font-size: 20px;
+}
+
+.create-new-display h2,
+.create-new-display p, 
+.help-page-display h2,
+.help-page-display p {
+    width: 370px;
+    background-color: white;
+}
+
+.interaction-option a{
+    position: relative;
+    text-align: center;
+    top: 12vh;
+}
+
+.create-new-display{
+    background-image: url(assets/New_Display_BG.png);
+    color: black;
+}
+
+.help-page-display {
+    background-image: url(assets/Help_Display_BG.png);
+    color: black;
+}
+
+.dark-mode-display{
+    background-image: url(assets/Dark_Display_BG.png);
+    color: white;
+}
+
+.interaction-option:hover{
+    filter: brightness(115%);
+    transition: all .3s ease;
+}
+
+.create-new-display:hover{
+    filter: brightness(103%);
+    transition: all .3s ease;
+}
