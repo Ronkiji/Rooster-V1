@@ -55,8 +55,8 @@
   </nav>
 
   <div id="white-bg"></div>
-
   <div class="top-bar"></div>
+
   <div id="text-editor">
     <div class="typo-emph">
       <button onclick="execCmd('bold'); jQuery(this);"><i class="fa fa-bold"></i></button>
@@ -72,71 +72,252 @@
     </div>
 
     <div class="split2">
-    <div class="typo-emph">
-      <button onclick="execCmd('subscript'); jQuery(this);"><i class="fa fa-subscript"></i></button>
-      <button onclick="execCmd('superscript');"><i class="fa fa-superscript"></i></button>
-    </div>
+      <div class="typo-emph">
+        <button onclick="execCmd('subscript'); jQuery(this);"><i class="fa fa-subscript"></i></button>
+        <button onclick="execCmd('superscript');"><i class="fa fa-superscript"></i></button>
+      </div>
 
-    <div class="typo-emph div-section">
-      <button onclick="execCmd('undo');"><i class="fa fa-undo"></i></button>
-      <button onclick="execCmd('redo');"><i class="fa fa-repeat"></i></button>
-    </div>
+      <div class="typo-emph div-section">
+        <button onclick="execCmd('undo');"><i class="fa fa-undo"></i></button>
+        <button onclick="execCmd('redo');"><i class="fa fa-repeat"></i></button>
+      </div>
 
-    <div class="typo-emph div-section">
-      <button onclick="execCmd('insertUnorderedList');"><i class="fa fa-list-ul"></i></button>
-      <button onclick="execCmd('insertOrderedList');"><i class="fa fa-list-ol"></i></button>
+      <div class="typo-emph div-section">
+        <button onclick="execCmd('insertUnorderedList');"><i class="fa fa-list-ul"></i></button>
+        <button onclick="execCmd('insertOrderedList');"><i class="fa fa-list-ol"></i></button>
+      </div>
     </div>
-  </div>
 
     <div class="split1">
-    <div class="typo-emph div-section font">
-      <select class="font-names" onchange="execCommandWithArg('fontName', this.value);">
-        <option id="arial" value="Arial">Arial</option>
-        <option id="calibri" value="Calibri">Calibri</option>
-        <option id="comic-sans-ms" value="Comic Sans MS">Comic Sans MS</option>
-        <option id="courier" value="Courier">Courier</option>
-        <option id="georgia" value="Georgia">Georgia</option>
-        <option id="helvetica" value="Helvetica">Helvetica</option>
-        <option id="tahoma" value="Tahoma">Tahoma</option>
-        <option id="times-new-roman" value="Times New Roman">Times New Roman</option>
-        <option id="verdana" value="Verdana">Verdana</option>
-      </select>
+      <div class="typo-emph div-section font">
+        <select class="font-names" onchange="execCommandWithArg('fontName', this.value);">
+          <option id="arial" value="Arial">Arial</option>
+          <option id="calibri" value="Calibri">Calibri</option>
+          <option id="comic-sans-ms" value="Comic Sans MS">Comic Sans MS</option>
+          <option id="courier" value="Courier">Courier</option>
+          <option id="georgia" value="Georgia">Georgia</option>
+          <option id="helvetica" value="Helvetica">Helvetica</option>
+          <option id="tahoma" value="Tahoma">Tahoma</option>
+          <option id="times-new-roman" value="Times New Roman">Times New Roman</option>
+          <option id="verdana" value="Verdana">Verdana</option>
+        </select>
 
-      <select class="font-size" onchange="execCommandWithArg('fontSize', this.value);">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-      </select>
-    </div>
+        <select class="font-size" onchange="execCommandWithArg('fontSize', this.value);">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+      </div>
 
 
-    <div class="title">
-      <div></div>
-      <h1 contenteditable="true">Project Title</h1>
-    </div>
+      <div class="title">
+        <div></div>
+        <h1 contenteditable="true">Project Title</h1>
+      </div>
 
-    <div class="typo-emph div-section hilite">
-      <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);">
-      <button onclick="execHilite('hiliteColor', false)"><i class="fas fa-eraser"></i></button>
-    </div>
+      <div class="typo-emph div-section hilite">
+        <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);">
+        <button onclick="execHilite('hiliteColor', false)"><i class="fas fa-eraser"></i></button>
+      </div>
 
-    <div class="typo-emph div-section">
-      <button onclick="execCommandWithArg('insertImage', prompt('Enter the image URL',''));"><i
-          class="fa fa-file-image-o"></i></button>
+      <div class="typo-emph div-section">
+        <button onclick="execCommandWithArg('insertImage', prompt('Enter the image URL',''));"><i
+            class="fa fa-file-image-o"></i></button>
+      </div>
+      <div class="typo-emph div-section">
+        <button onclick="toggleSource();"><i class="fa fa-code"></i></button>
+        <button id="save-button"><i class="fas fa-save"></i></button>
+      </div>
     </div>
-    <div class="typo-emph div-section">
-      <button onclick="toggleSource();"><i class="fa fa-code"></i></button>
-      <button id="save-button"><i class="fas fa-save"></i></button>
-    </div>
-  </div>
   </div>
   <div class="text-area">
-    <iframe style="word-wrap:normal;" name="richTextField"></iframe>
+    <iframe name="richTextField"></iframe>
   </div>
+
+  <div class="reminder-top">
+    <h2>Reminders</h2>
+    <button><i class="fas fa-plus"></i></button>
+  </div>
+
+    <div class="size scrollbar">
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+
+
 </body>
 
 <script type="text/javascript" src="js-project-editing-mode.js"></script>

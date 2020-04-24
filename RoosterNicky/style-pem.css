@@ -3,26 +3,25 @@
     src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     font-family: Ebrima, Helvetica, Aria, sans-serif;
 }
 
-#white-bg{
+#white-bg {
     height: 969px;
     width: 1152px;
     background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
-.top-bar{
+.top-bar {
     position: absolute;
     top: 72px;
-    width: 1152px;
+    width: 1154px;
     height: 60px;
     background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.329);
 }
 
 #text-editor{
@@ -51,7 +50,6 @@ iframe{
     background-color: white;
     overflow-x: hidden;
     word-wrap: break-word;
-    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329); */
 }
 
 #text-editor button {
@@ -166,7 +164,7 @@ iframe{
 
 .typo-emph #save-button:hover {
     transition: ease-in-out .2s;
-    filter: brightness(110%);
+    filter: brightness(115%);
     cursor: pointer;
 }
 
@@ -193,40 +191,236 @@ iframe{
     font-size: 50px;
 }
 
+.reminder-top {
+    position: absolute;
+    left: 1180px;
+    top: 84px;
+}
+
+.reminder-top h2 {
+    vertical-align: middle;
+    font-size: 35px;
+}
+
+.reminder-top button {
+    all: unset;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 15px;
+    padding: 5px;
+    left: 180px;
+    bottom: 40px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #8833a2;
+    color: white;
+}
+
+.reminder-top button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+.in-display {
+    position: relative;
+    margin: 20px auto;
+    width: 650px;
+    height: 95px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.buttons {
+    position: relative;
+    right: 15px;
+    float: right;
+}
+
+.buttons button {
+    border: 2px solid #600f79;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.buttons i {
+    font-size: 20px;
+    color: #600f79;
+}
+
+.buttons button, 
+.buttons img {
+    position: relative;
+    top: 7px;
+    width: 46px;
+    height: 46px;
+    margin: 0 6px;
+}
+
+.buttons img{
+    width: 46px;
+    height: 46px;
+    position: relative;
+    top: 23px;
+}
+
+.buttons button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(108%);
+    cursor: pointer;
+}
+
+.date-display{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #8833a2;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.date-display h3 {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 2px 0 0 10px;
+    padding-bottom: 0;
+}
+
+.date-display span {
+    position: relative;
+    font-size: 40px;
+    right: 1px;
+    padding: 10px;
+    bottom: 10px;
+    font-weight: 700;
+}
+
+.reminder-info {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    line-height: 30px;
+    padding-left: 40px;
+}
+
+.reminder-info h2{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.reminder-info p{
+    font-size: 15px;
+    font-style: oblique;
+    color: #8a8a8a
+}
+
+.size {
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    position: absolute;
+    left: 1135px;
+    top: 135px;
+    height: 830px;
+    width: 760px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #8833a2;
+}
 
 @media screen and (max-width: 1135px){
     .top-bar{
+        width: 700px;
         height: 95px;
+    }
+
+    #white-bg {
+        width: 700px;
     }
 
     .title {
         top: 110px;
+        width: 700px;
     }
 
     iframe {
         top: 250px;
+        width: 700px;
     }
 
-    .split2 button {
-        margin: 8px;
+    .split1 {
+        display: block;
+    }
+
+    .size{
+        left: 690px;
+    }
+
+    .reminder-top {
+        left: 734px;
     }
 }
 
 @media screen and (max-width: 640px){
     .top-bar{
+        width: 500px;
         height: 135px;
+    }
+
+    #white-bg {
+        width: 500px;
+        bottom: 20px;
+        height: 959px;
     }
 
     .title {
         top: 150px;
+        width: 400px;
     }
 
     iframe {
         top: 300px;
+        width: 500px;
     }
 
     .split2{
         display: block;
         margin-left: 0;
+    }
+
+    .size {
+        top: 195px;
+        left: 490px;
+        height: 800px;
+    }
+
+    .reminder-top {
+        top: 115px;
+        left: 535px;
     }
 }

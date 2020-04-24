@@ -25,11 +25,7 @@ body {
     transform: translate(-35%, -35%);
 }
 
-button {
-    all:unset;
-}
-
-.projects-div{
+.projects-div {
     display: block;
     position: relative;
     top: 100px;
@@ -37,13 +33,13 @@ button {
     width: 850px;
 }
 
-.projects-div h1{
+.projects-div h1 {
     position: relative;
     font-size: 60px;
     width: 1000px;
 }
 
-.size{
+.size {
     margin-top: 15px;
     height: 730px;
     width: 850px;
@@ -68,12 +64,37 @@ button {
     background-color: #8833a2;
 }
 
-
 .proj a{
     color: black;
     cursor: pointer; 
     width: 51%;
     height: 20px;
+}
+
+.proj button {
+    border: 2px solid #600f79;
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    border-radius: 100px;
+    
+    
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    float: right;
+}
+
+.proj button i {
+    font-size: 30px;
+    color: #600f79;
+}
+
+.proj button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
 }
 
 .card {
@@ -86,11 +107,11 @@ button {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
-.card div{
+.card div {
     display: inline-block;
 }
 
-.project-color{
+.project-color {
     height: 65px;
     width: 65px;
     background-color: #8833a2;
@@ -100,7 +121,7 @@ button {
     left: 20px;
 }
 
-.card h2{
+.card h2 {
     font-size: 40px;
     margin-left: 50px;
     font-weight: normal;
@@ -108,7 +129,7 @@ button {
     top: 3px;
 }
 
-.button{
+.button {
     position: relative;
     bottom: 100px;
     right: 50px;
@@ -206,11 +227,12 @@ button {
     text-align: center;
     justify-content: center;
     background-color: white;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 120px auto; /* 15% from the top and centered */
     padding: 20px;
     border: none;
     border-radius: 20px;
     width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
@@ -418,7 +440,7 @@ label span.orange-yellow {
 
 @media screen and (max-width: 950px){
     .popup-buttons {
-      font-size: 1.3vw;
+      font-size: 100%;
     }
   }
   
