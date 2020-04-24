@@ -78,6 +78,7 @@ body, html {
 .interaction-option{
     display: inline-block;
     position: relative;
+    border: none;
     top: 190px;
     width: 30%;
     height: 220px;;
@@ -162,7 +163,7 @@ body, html {
 }
 
 .buttons input, 
-.buttons img{
+.buttons img {
     width: 55px;
     height: 55px;
     margin: 0 5px;

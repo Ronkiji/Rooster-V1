@@ -15,8 +15,8 @@
   <link href="projects.html" type="text/html">
   <link href="reminders.html" type="text/html">
   <link rel="shortcut icon" href="assets/Rooster_Browser_Tab_Icon.png">
-
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="projects-editing-mode.html" type="text/html">
 
   <title>Rooster - Home</title>
 </head>
@@ -52,15 +52,85 @@
     </ul>
   </nav>
 
+  <!-- The Modal -->
+  <div id="project-menu" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <br>
+      <h2>Make Your New Project!</h2>
+      <form>
+        <div class="project-title-div">
+          <input type="text" id="project-title" pattern="[\w\W\d\D\s]{1,15}" data-toggle="tooltip" data-placement="top"
+            title="English alphabet only, 3-15 characters" required>
+          <label for="project-title">Project Title</label>
+        </div>
+
+        <br>
+        <span class="color-title">Choose Your Project's Color</span>
+        <br>
+
+        <div class="color-picker">
+          <input type="radio" name="color" id="yellow" value="yellow" required />
+          <label for="yellow"><span class="yellow"></span></label>
+
+          <input type="radio" name="color" id="light-green" />
+          <label for="light-green"><span class="light-green"></span></label>
+
+          <input type="radio" name="color" id="dark-green" />
+          <label for="dark-green"><span class="dark-green"></span></label>
+
+          <input type="radio" name="color" id="turquoise" />
+          <label for="turquoise"><span class="turquoise"></span></label>
+
+          <input type="radio" name="color" id="royal-blue" />
+          <label for="royal-blue"><span class="royal-blue"></span></label>
+
+          <input type="radio" name="color" id="dark-blue" />
+          <label for="dark-blue"><span class="dark-blue"></span></label>
+
+          <input type="radio" name="color" id="purple" />
+          <label for="purple"><span class="purple"></span></label>
+
+          <input type="radio" name="color" id="pink" />
+          <label for="pink"><span class="pink"></span></label>
+
+          <input type="radio" name="color" id="red" />
+          <label for="red"><span class="red"></span></label>
+
+          <input type="radio" name="color" id="orange" />
+          <label for="orange"><span class="orange"></span></label>
+
+          <input type="radio" name="color" id="lighter-orange" />
+          <label for="lighter-orange"><span class="lighter-orange"></span></label>
+
+          <input type="radio" name="color" id="orange-yellow" />
+          <label for="orange-yellow"><span class="orange-yellow"></span></label>
+        </div>
+
+        <div class="error-msg" id="error-registration"></div>
+        
+        <input type="submit" class="popup-buttons confirm" value="Create">
+        <input type="reset" class="popup-buttons cancel" value="Cancel">
+      </form>
+
+      <a href="projects-editing-mode.html">PEM</a>
+    </div>
+  </div>
+
   <div class="options">
-    <div onclick="location.href='#new-project';" class="interaction-option create-new-display">
+    <div class="interaction-option create-new-display" id="myBtn">
       <h2>Start a New Project</h2>
       <p>Click here to create your new project!</p>
     </div>
 
     <div onclick="location.href='help.html';" class="interaction-option help-page-display">
-      <h2>New to Rooster?</h2>
-      <p>Check out our help page!</p>
+      <span>
+        <h2>New to Rooster?</h2>
+      </span>
+      <span>
+        <p>Check out our help page!</p>
+      </span>
     </div>
 
     <div onclick="location.href='#dark-mode';" class="interaction-option dark-mode-display">
@@ -68,7 +138,6 @@
       <p>Too bright? Let's tone it down.</p>
     </div>
   </div>
-
 
   <div class="projects-div">
     <h1>Your Projects</h1>
@@ -80,7 +149,7 @@
           <div class="card">
             <div class="project-color"></div>
             <div class="project-info">
-              <h2>Project Title</h2>
+              <h2>WWWWWWWWWWWWWWW</h2>
             </div>
           </div>
         </a>
@@ -181,10 +250,8 @@
       </div>
     </div>
   </div>
-
-
 </body>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js-projects.js"></script>
 
 </html>
