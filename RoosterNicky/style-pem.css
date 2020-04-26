@@ -266,6 +266,7 @@ iframe{
     height: 46px;
     position: relative;
     top: 23px;
+    visibility: hidden;
 }
 
 .buttons button:hover {
@@ -328,7 +329,7 @@ iframe{
     border: 15px solid transparent;
     position: absolute;
     left: 1135px;
-    top: 135px;
+    top: 120px;
     height: 830px;
     width: 760px;
     overflow: scroll;
