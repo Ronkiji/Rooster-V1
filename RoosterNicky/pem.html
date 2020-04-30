@@ -16,7 +16,7 @@
   <link href="reminders.html" type="text/html">
   <link rel="shortcut icon" href="assets/Rooster_Browser_Tab_Icon.png">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link href="projects-editing-mode.html" type="text/html">
+  <link href="pem.html" type="text/html">
 
   <title>Rooster - Home</title>
 
@@ -140,186 +140,229 @@
 
   <div class="reminder-top">
     <h2>Reminders</h2>
-    <button><i class="fas fa-plus"></i></button>
+    <button id="modal-button"><i class="fas fa-plus"></i></button>
   </div>
 
-    <div class="size scrollbar">
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
+  <div id="new-reminder-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <br>
+      <h2>Create a Reminder!</h2>
+      <br>
+      <form>
+        <div class="rem-name-div">
+          <input type="text" id="rem-name" pattern="[\w\W\d\D\s]{1,15}" data-toggle="tooltip" data-placement="top"
+            title="English alphabet only, 3-15 characters" required>
+          <label for="rem-name">Project Title</label>
         </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
+        <br>
+        <div class="pad-under">
+        <span class="date-q">Add a Date?</span>
+        <br>
+          <label class="radio-inline">Yes
+            <input type="radio" name="optradio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio-inline">No
+            <input type="radio" name="optradio" checked>
+            <span class="checkmark"></span>
+          </label>
         </div>
-        <div class="buttons">
 
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
+        <div class="pad-under">
+          <span class="date-q">Select a Date:</span>
+          <br>
+          <div class="datepicker">
+            <input type="date" required>
+          </div>
         </div>
-      </div>
 
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
+        <div class="error-msg" id="error-registration"></div>
 
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
+        <input type="submit" class="popup-buttons confirm" value="Create" id="create-button">
+        <input type="reset" class="popup-buttons cancel" value="Cancel">
 
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-
-          <img src="assets/Overdue_Icon.png">
-          <button><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
+      </form>
     </div>
+  </div>
+
+  <div class="size scrollbar">
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+    <div class="in-display">
+      <div class="date-display">
+        <h3>Mo</h3>
+        <span>##</span>
+      </div>
+      <div class="reminder-info">
+        <h2>Reminder Title</h2>
+        <p>Project Affiliation</p>
+      </div>
+      <div class="buttons">
+
+        <img src="assets/Overdue_Icon.png">
+        <button><i class="fa fa-check"></i></button>
+        <button><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+
+  </div>
 
 
 
 </body>
 
-<script type="text/javascript" src="js-project-editing-mode.js"></script>
+<script type="text/javascript" src="js-pem.js"></script>
 
 </html>

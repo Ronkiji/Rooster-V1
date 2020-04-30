@@ -425,3 +425,225 @@ iframe{
         left: 535px;
     }
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    margin: 120px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content h2 {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.error-msg{
+    margin: 20px;
+    word-wrap: break-word;
+    font-size: 0.75vw;
+    font-style: italic;
+    font-weight: bold;
+    color: #bc2626;
+  }  
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rem-name-div input[type="text"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.45rem 0;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+}
+
+.rem-name-div label {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    color: #AAA;
+    cursor: text;
+    font-size: 20px;
+    top: 238px;
+}
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #AAA;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 20px;
+    border: none;
+    background:#ecf0f1;
+    margin-top: 20px;
+    padding: 5px;
+    display: block;
+    border-radius: 7px;
+    text-align: right;
+    margin: auto;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+    transition: ease-in-out .2s;
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.datepicker{
+    padding-top: 10px;
+}
+
+.date-q {
+    font-size: 20px;
+    color: #AAA;
+    padding-bottom: 18px;
+}
+
+.pad-under {
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+/* The container */
+.radio-inline {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #AAA;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-inline input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-inline:hover input ~ .checkmark {
+    transition: ease-in-out .15s;
+    filter: brightness(90%);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-inline input:checked ~ .checkmark {
+    transition: ease-in-out .15s;
+    background-color: #8833a2;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-inline input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.popup-buttons{
+    font-size: 90%;
+    font-weight: 700;
+    width: 40%;
+    margin: 15px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #AAA;
+}
+
+.popup-buttons:hover{
+    transition: ease-in-out .2s;
+    filter: brightness(90%);
+}
+
+#create-button {
+    color: white;
+    background-color: #8833a2;
+}
+
+#create-button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(110%);
+}
+
+.error-msg{
+    margin: 10px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    font-size: 0.75vw;
+    font-style: italic;
+    font-weight: bold;
+    color: #bc2626;
+  }  
