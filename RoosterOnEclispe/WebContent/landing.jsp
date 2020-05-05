@@ -42,7 +42,7 @@
                 </div>
                 <br><br><br>
                 <div class="modal-inputs">
-                    <input type="password" id="luserpw" name="luserpw" pattern="{8,30}" required>
+                    <input type="password" id="luserpw" name="luserpw" pattern="[\w\W\d\D\s]{8,30}" required>
                     <label for="luserpw">Password</label>
                 </div>
                 <br>
@@ -66,7 +66,7 @@
                 <br><br>
                 <div class="modal-inputs">
                     <input type="text" id="rname" name="rname" pattern="[a-zA-Z]{1,15}" data-toggle="tooltip"
-                        data-placement="top" title="English alphabet only, 3-10 characters" required>
+                        data-placement="top" title="English alphabet only, 3-15 characters" required>
                     <label for="rname">Name</label>
                 </div>
                 <br><br><br>
@@ -77,12 +77,12 @@
                 </div>
                 <br><br><br>
                 <div class="modal-inputs" data-toggle="tooltip" data-placement="top" title="8-30 characters">
-                    <input type="password" id="ruserpw" name="ruserpw" pattern="{8,30}" required>
+                    <input type="password" id="ruserpw" name="ruserpw" pattern="[\w\W\d\D\s]{8,30}" required>
                     <label for="ruserpw">Password</label>
                 </div>
                 <br><br><br>
                 <div class="modal-inputs">
-                    <input type="password" id="rconfirmpw" name="rconfirmpw" pattern="{8,30}" required>
+                    <input type="password" id="rconfirmpw" name="rconfirmpw" pattern="[\w\W\d\D\s]{8,30}" required>
                     <label for="rconfirmpw">Confirm Password</label>
                 </div>
                 <br>
@@ -204,6 +204,6 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="js-landing.js"></script>
+<script type="text/javascript" src="js-landing.jsp"></script>
 
 </html>

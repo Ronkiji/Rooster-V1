@@ -1,9 +1,11 @@
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Registration
@@ -46,67 +48,24 @@ public class Registration extends HttpServlet {
 		user.setConfirmPassword(confirmpw);
 		
 		UserDAO userDao = new UserDAO();
-		String userRegistered = userDao.registerUser(user);
+		boolean status = userDao.registerUser(user);
 		
-		if(userRegistered.equals("SUCCESS")) {
+		ProjectDAO projectDao = new ProjectDAO();
+		Project[] projectArray = projectDao.getProjectArray(username);
+		
+		if(status == true) {	
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("name", name);
+			session.setAttribute("username", username);
+			session.setAttribute("user", user);
+			session.setAttribute("projectArray", projectArray);
+	
+			
 			response.setStatus(HttpServletResponse.SC_OK);
-		} else if(userRegistered.equals("FAIL")) {
+			
+		} else if(status == false) {
 			response.sendError(401, "Login Failed");
 		}
 	}
-		
-		
-//		PrintWriter out = response.getWriter();
-//		
-//		String rname = request.getParameter("rname");
-//		String rusername = request.getParameter("rusername");
-//		String ruserpw = request.getParameter("ruserpw");
-//		String rconfirmpw = request.getParameter("rconfirmpw");
-//		
-//		System.out.println(rname);
-//		System.out.println(rusername);
-//		System.out.println(ruserpw);
-//		System.out.println(rconfirmpw);
-//		
-//		if(ruserpw.equals(rconfirmpw)) {
-//			try {
-//				System.out.println("Checkpoint 1");
-//				Class.forName("com.mysql.jdbc.Driver");
-//				Connection con;
-//				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rooster", "root", "RoosterSQL123");
-//				Statement stmt;
-//				stmt = con.createStatement();
-//				ResultSet rs = stmt.executeQuery("SELECT username FROM rooster.user WHERE username = '"+rusername+"'");
-//				
-//				if(!rs.next()) {
-//					System.out.println("Checkpoint 2");
-//					PreparedStatement pst = null;
-//					String query = "INSERT INTO rooster.user(username, name, password) VALUES ('"+rusername+"', '"+rname+"', '"+ruserpw+"' )";
-//					pst = con.prepareStatement(query);
-//					int x = pst.executeUpdate();
-//				    if(x > 0){ // If properly inserted, set response status to success
-//				    	System.out.println("Information properly inserted into the database");
-//				    	response.setStatus(HttpServletResponse.SC_OK);	
-//				    } else {
-//						System.out.println("Checkpoint 5");
-//						response.sendError(401, "Login Failed");
-//				    }
-//				} else {
-//					System.out.println("Checkpoint 3");
-//					response.sendError(401, "Login Failed");
-//					// somehow return this to ui and say username taken
-//				}    
-//			} catch (SQLException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} catch (ClassNotFoundException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		} else {
-//			System.out.println("Checkpoint 4");
-//			response.sendError(401, "Login Failed");
-//			// somehow return this to ui and say username taken
-//		}
-//	}
 }

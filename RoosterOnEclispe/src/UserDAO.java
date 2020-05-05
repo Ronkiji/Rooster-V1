@@ -1,5 +1,4 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +8,7 @@ public class UserDAO {
 
 	Connection con = null;
 
-	public String registerUser(User user) {
+	public boolean registerUser(User user) {
 		String name = user.getName();
 		String username = user.getUsername();
 		String password = user.getPassword();
@@ -25,48 +24,52 @@ public class UserDAO {
 						.executeQuery("SELECT username FROM rooster.user WHERE username = '" + username + "'");
 
 				if (!rs.next()) {
-					System.out.println("Checkpoint 2");
 					PreparedStatement pst = null;
-					String query = "INSERT INTO rooster.user(username, name, password) VALUES ('" + username + "', '"
-							+ name + "', '" + password + "' )";
+					String query = "INSERT INTO rooster.user(username, name, password) VALUES (?, ?, ?)";
 					pst = con.prepareStatement(query);
+					pst.setString(1, username);
+					pst.setString(2, name);
+					pst.setString(3, password);
+					
 					int x = pst.executeUpdate();
 					if (x > 0) { // If properly inserted, set response status to success
-						System.out.println("Information properly inserted into the database");
-						return "SUCCESS";
+						System.out.println("New user properly inserted into the database");
+						return true;
 					} else {
-						System.out.println("Checkpoint 5");
-						return "FAIL";
+						System.out.println("New user failed to insert into the database.");
+						return false;
 					}
 				} else {
-					System.out.println("Checkpoint 3");
-					return "FAIL";
+					System.out.println("New user failed to insert into the database.");
+					return false;
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return "FAIL";
+		System.out.println("New user's password and confirm password do not match.");
+		return false;
 	}
 	
-	public String authenticateUser(User user) {
+	public boolean authenticateUser(User user) {
 		String username = user.getUsername();
 		String password = user.getPassword();
-		System.out.println("Checkpoint 1");
 		if(username != null && password != null) {
-			System.out.println("Checkpoint 2");
+
 			try { // this is for login - extracting information from database
 				con = DBConnection.createConnection();
 				Statement stmt = con.createStatement();
 				ResultSet rs = stmt.executeQuery("SELECT username, password FROM rooster.user WHERE username = '"+username+"' and password = BINARY '"+password+"'");
 				
 				if(rs.next()) {
-					System.out.println("Checkpoint 3");
-					return "SUCCESS";				
+					System.out.println("User found in the database, login sucessful.");
+					con.close();
+					return true;				
 				} else {
-					System.out.println("Checkpoint 4");
-					return "FAIL";
+					System.out.println("User credentials not found in database.");
+					con.close();
+					return false;
 				}
 				
 			} catch (SQLException e) {
@@ -74,8 +77,31 @@ public class UserDAO {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("Checkpoint 5");
-		return "FAIL";
+		System.out.println("Either user's username or password is null.");
+		return false;
+	}
+	
+	public User autofill(User user, String username) { // this will fill all the remaining information about the user
+
+		try {
+			Connection con = DBConnection.createConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt
+					.executeQuery("SELECT * FROM rooster.user WHERE username = '" + username + "'");
+			while(rs.next()) {
+				user.setUsername(rs.getString(1));
+				user.setName(rs.getString(2));
+				user.setDarkmode(rs.getByte(4));
+				user.setIcon(rs.getString(5));
+			}
+			con.close();
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 	public void updateName(User user) {

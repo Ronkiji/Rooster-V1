@@ -5,7 +5,25 @@ public class User {
 	private String username;
 	private String password;
 	private String confirmPassword;
+	private String icon;
+	private byte darkmode;
 	
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	public byte getDarkmode() {
+		return darkmode;
+	}
+
+	public void setDarkmode(byte darkmode) {
+		this.darkmode = darkmode;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}

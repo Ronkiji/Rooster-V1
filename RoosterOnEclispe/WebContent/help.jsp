@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +16,7 @@
   <link href="reminders.jsp" type="text/html">
   <link rel="shortcut icon" href="assets/Rooster_Browser_Tab_Icon.png">
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <title>Rooster - Home</title>
 </head>
@@ -31,11 +29,11 @@
     </label>
 
     <ul class="expanded-ul">
-      <li class="nav-option"><a href="home.html"><span>Home</span><img src="assets/Home_Button.png" alt="Home"></a></li>
-      <li class="nav-option"><a href="projects.html"><span>Projects</span><img src="assets/Projects_Button.png" alt="Projects"></a></li>
-      <li class="nav-option"><a href="reminders.html"><span>Reminders</span><img src="assets/Reminders_Button.png" alt="Reminders"></a></li>
+      <li class="nav-option"><a href="home.jsp"><span>Home</span><img src="assets/Home_Button.png" alt="Home"></a></li>
+      <li class="nav-option"><a href="projects.jsp"><span>Projects</span><img src="assets/Projects_Button.png" alt="Projects"></a></li>
+      <li class="nav-option"><a href="reminders.jsp"><span>Reminders</span><img src="assets/Reminders_Button.png" alt="Reminders"></a></li>
 
-      <a class="logo-link" href="home.html"><img src="assets/Rooster_White.png" class="navbar-logo"></a>
+      <a class="logo-link" href="home.jsp"><img src="assets/Rooster_White.png" class="navbar-logo"></a>
 
       <li class="dropdown nav-option">
         <a href="javascript:void(0)"><span class="small-nav">Settings</span><img src="assets/Settings_Icon.png"></a>
@@ -45,7 +43,7 @@
           <a href="#" class="dropdown-option">Logout</a>
         </div>
       </li>
-      <li class="nav-option"><a href="help.html"><span class="small-nav">Help</span><img src="assets/Help_Icon.png"></a></li>
+      <li class="nav-option"><a href="help.jsp"><span class="small-nav">Help</span><img src="assets/Help_Icon.png"></a></li>
       <li class="nav-option"><a href="#dark-mode"><span class="small-nav">Dark Mode</span><img src="assets/Dark_Mode_Icon.png"></a></li>
     </ul>
   </nav>
@@ -153,8 +151,6 @@
 <br>
 <br>
 
-<h1><a href="landing.html">Landing link :)</a></h1>
-<script type="text/javascript" src="js-landing.js"></script>
 
 </html>
 <!--<nav class="navbar">

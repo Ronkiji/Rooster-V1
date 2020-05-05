@@ -43,13 +43,32 @@ public class Login extends HttpServlet {
 		user.setPassword(password);
 		
 		UserDAO userDao = new UserDAO();
-		String userLogin = userDao.authenticateUser(user);
+		boolean status = userDao.authenticateUser(user);
 		
-		if(userLogin.equals("SUCCESS")) {
-			response.setStatus(HttpServletResponse.SC_OK);
+		ProjectDAO projectDao = new ProjectDAO();
+		Project[] project = projectDao.getProjectArray(username);
+		
+		
+		if(status == true) {
+			
+			user = userDao.autofill(user, username);
+			
 			HttpSession session = request.getSession();
 			session.setAttribute("username", username);
-		} else if(userLogin.equals("FAIL")) {
+			session.setAttribute("name", user.getName());
+			session.setAttribute("darkmode", user.getDarkmode());
+			session.setAttribute("icon", user.getIcon());
+			session.setAttribute("projectArray", project);
+			
+//			System.out.println(projectDao.getProjectArray(username)[4].getId());
+//			
+//			Object obj = session.getAttribute("projectArray");
+//			Project[] projectTest = (Project[])obj;
+//			System.out.println(projectTest[4].getTitle());
+			
+			response.setStatus(HttpServletResponse.SC_OK);
+			
+		} else if(status == false) {
 			response.sendError(401, "Login Failed");
 		}
 	}

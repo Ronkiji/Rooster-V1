@@ -58,9 +58,8 @@
     <div class="greeting">
       <img src="assets/Default_Profile_Picture.png">
       <!--Input New Profile Picture Here-->
-      <h1>Hi <span><%=session.getAttribute("username")%></span>!</h1>
+      <h1>Hi <span><%=session.getAttribute("name")%></span>!</h1>
       <!--Input Name Here-->
-
       <div onclick="location.href='help.jsp';" class="interaction-option help-page-display">
         <h2>New to Rooster?</h2>
         <p>Check out our help page!</p>
@@ -94,8 +93,25 @@
         </div>
         <div class="buttons">
           <img src="assets/Overdue_Icon.png">
-          <input type="image" src="assets/Complete_Icon.png">
-          <input type="image" src="assets/Trash_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="in-display">
+        <div class="date-display">
+          <h3>Mo</h3>
+          <span>##</span>
+        </div>
+        <div class="reminder-info">
+          <h2>Reminder Title</h2>
+          <p>Project Affiliation</p>
+        </div>
+        <div class="buttons">
+          
+          <img src="assets/Overdue_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
         </div>
       </div>
 
@@ -110,8 +126,8 @@
         </div>
         <div class="buttons">
           <img src="assets/Overdue_Icon.png">
-          <input type="image" src="assets/Complete_Icon.png">
-          <input type="image" src="assets/Trash_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
         </div>
       </div>
 
@@ -125,30 +141,14 @@
           <p>Project Affiliation</p>
         </div>
         <div class="buttons">
+          
           <img src="assets/Overdue_Icon.png">
-          <input type="image" src="assets/Complete_Icon.png">
-          <input type="image" src="assets/Trash_Icon.png">
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-          <p>Project Affiliation</p>
-        </div>
-        <div class="buttons">
-          <img src="assets/Overdue_Icon.png">
-          <input type="image" src="assets/Complete_Icon.png">
-          <input type="image" src="assets/Trash_Icon.png">
+          <button><i class="fa fa-check"></i></button>
+          <button><i class="far fa-trash-alt"></i></button>
         </div>
       </div>
     </div>
   </div>
 </body>
-<script type="text/javascript" src="js-landing.js"></script>
 
 </html>

@@ -78,6 +78,7 @@ body, html {
 .interaction-option{
     display: inline-block;
     position: relative;
+    border: none;
     top: 190px;
     width: 30%;
     height: 220px;;
@@ -154,22 +155,41 @@ body, html {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
-.buttons{
+.buttons {
     position: relative;
-    top: 30px;
+    top: 10px;
     right: 25px;
     float: right;
 }
 
-.buttons input, 
-.buttons img{
+.buttons button {
+    border: 2px solid #600f79;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.buttons i {
+    font-size: 26px;
+    color: #600f79;
+}
+
+.buttons button, 
+.buttons img {
     width: 55px;
     height: 55px;
-    margin: 0 5px;
+    margin: 0 6px;
 }
 
 .buttons img{
+    position: relative;
+    top: 17px;
     visibility: hidden;
+}
+
+.buttons button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(108%);
+    cursor: pointer;
 }
 
 .date-display{

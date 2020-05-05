@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
 @font-face {
     font-family: Ebrima;
     src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
@@ -16,7 +18,7 @@ body, html {
     background-color: #fbfafc;
 }
 
-.projects-div{
+.projects-div {
     display: block;
     position: relative;
     top: 100px;
@@ -24,13 +26,13 @@ body, html {
     width: 850px;
 }
 
-.projects-div h1{
+.projects-div h1 {
     position: relative;
     font-size: 60px;
     width: 1000px;
 }
 
-.size{
+.size {
     margin-top: 15px;
     height: 730px;
     width: 850px;
@@ -53,14 +55,39 @@ body, html {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #8833a2;
-} 
-
+}
 
 .proj a{
     color: black;
     cursor: pointer; 
     width: 51%;
     height: 20px;
+}
+
+.proj button {
+    border: 2px solid #600f79;
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    border-radius: 100px;
+    
+    
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    float: right;
+}
+
+.proj button i {
+    font-size: 30px;
+    color: #600f79;
+}
+
+.proj button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
 }
 
 .card {
@@ -73,11 +100,11 @@ body, html {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
-.card div{
+.card div {
     display: inline-block;
 }
 
-.project-color{
+.project-color {
     height: 65px;
     width: 65px;
     background-color: #8833a2;
@@ -87,7 +114,7 @@ body, html {
     left: 20px;
 }
 
-.card h2{
+.card h2 {
     font-size: 40px;
     margin-left: 50px;
     font-weight: normal;
@@ -95,7 +122,7 @@ body, html {
     top: 3px;
 }
 
-.button{
+.button {
     position: relative;
     bottom: 100px;
     right: 50px;
@@ -116,30 +143,29 @@ body, html {
     height: 750px;
 }
 
-.interaction-option{
-    display: inline-block;
+.interaction-option {
+    display: block;
     position: relative;
     width: 100%;
-    height: 188.5px;
+    height: 190px;
     padding: 10px 20px;
     text-align: left;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.329);
     text-decoration: none;
     margin-bottom: 50px;
     cursor: pointer;
-    vertical-align: middle;
 }
 
-.interaction-option h2{
+.interaction-option h2 {
     position: relative;
     margin-top: 10px;
     font-weight: 500;
     text-align: left;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
 }
 
-.interaction-option p{
+.interaction-option p {
     position: relative;
     margin-top: 0.5vh;
     font-weight: 500;
@@ -147,33 +173,24 @@ body, html {
     font-size: 20px;
 }
 
-.create-new-display h2,
-.create-new-display p, 
-.help-page-display h2,
-.help-page-display p {
-    width: 370px;
-    background-color: white;
-}
-
-.interaction-option a{
+.interaction-option a {
     position: relative;
     text-align: center;
     top: 12vh;
 }
 
-.create-new-display{
+.create-new-display {
     background-image: url(assets/New_Display_BG.png);
-    color: black;
 }
 
 .help-page-display {
     background-image: url(assets/Help_Display_BG.png);
-    color: black;
 }
 
 .dark-mode-display{
     background-image: url(assets/Dark_Display_BG.png);
     color: white;
+    margin-bottom: 0px;
 }
 
 .interaction-option:hover{
@@ -184,4 +201,260 @@ body, html {
 .create-new-display:hover{
     filter: brightness(103%);
     transition: all .3s ease;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    margin: 120px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content h2 {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    font-size: 25px;
+}
+
+.error-msg{
+    margin: 20px;
+    word-wrap: break-word;
+    font-size: 0.75vw;
+    font-style: italic;
+    font-weight: bold;
+    color: #bc2626;
+  }  
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-title-div input[type="text"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.45rem 0;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+}
+
+.project-title-div label {
+    position: absolute;
+    left: -10px;
+    width: 100%;
+    color: #AAA;
+    cursor: text;
+    font-size: 20px;
+    transform: translate(0px, -38px);
+}
+
+.color-title {
+    font-size: 20px;
+    color: #AAA;
+    padding-bottom: 18px;
+}
+
+/* RADIO COLOR PICKER */
+
+.color-picker {
+    padding-top: 8px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+form input[type="radio"]:checked + label span {
+    transform: scale(1.25);
+    transform-origin: center;
+}
+
+input[type="radio"]:checked + label .yellow {
+    border: 3px solid #d0bc09;
+}
+
+input[type="radio"]:checked + label .light-green {
+    border: 3px solid #6d9d2c;
+}
+
+input[type="radio"]:checked + label .dark-green {
+    border: 3px solid #047c3e;
+}
+
+input[type="radio"]:checked + label .turquoise {
+    border: 3px solid #017e7f;
+}
+
+input[type="radio"]:checked + label .royal-blue {
+    border: 3px solid #026296;
+}
+
+input[type="radio"]:checked + label .dark-blue {
+    border: 3px solid #03447d;
+}
+
+input[type="radio"]:checked + label .purple {
+    border: 3px solid #531870;
+}
+
+input[type="radio"]:checked + label .pink {
+    border: 3px solid #a30f73;
+}
+
+input[type="radio"]:checked + label .red {
+    border: 3px solid #c60b12;
+}
+
+input[type="radio"]:checked + label .orange {
+    border: 3px solid #c14212;
+}
+
+input[type="radio"]:checked + label .lighter-orange {
+    border: 3px solid #c45f08;
+}
+
+input[type="radio"]:checked + label .orange-yellow {
+    border: 3px solid #c18801;
+}
+
+form label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+label:hover span {
+    transform: scale(1.25);
+}
+
+label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+label span.yellow {
+    background: #ffe600;
+}
+
+label span.light-green {
+    background: #8cc63e;
+}
+
+label span.dark-green {
+    background: #00a550;
+}
+label span.turquoise {
+    background: #00aaac;
+}
+
+label span.royal-blue {
+    background: #0083ca;
+}
+
+label span.dark-blue {
+    background: #005aaa;
+}
+
+label span.purple {
+    background: #6f2b90;
+}
+
+label span.pink {
+    background: #c5168c;
+}
+
+label span.red {
+    background: #ed1c24;
+}
+
+label span.orange {
+    background: #f05a22;
+}
+
+label span.lighter-orange {
+    background: #f5821f;
+}
+
+label span.orange-yellow {
+    background: #fdb813;
+}
+
+.popup-buttons{
+    font-size: 90%;
+    font-weight: 700;
+    width: 40%;
+    margin: 5px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #AAA;
+}
+
+.popup-buttons:hover{
+    transition: ease-in-out .2s;
+    filter: brightness(90%);
+}
+
+#create {
+    color: white;
+    background-color: #8833a2;
+}
+
+#create:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(110%);
+}
+
+@media screen and (max-width: 950px){
+    .popup-buttons {
+      font-size: 100%;
+    }
+  
+  
+  .confirm {
+    background-color: #8833a2;
+    color: white;
+   }
 }
