@@ -543,6 +543,11 @@ input[type="date"]:focus {
     filter: brightness(90%);
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="date"]::-webkit-calendar-picker-indicator:focus {
+    cursor: pointer;
+}
+
 .datepicker{
     padding-top: 10px;
 }

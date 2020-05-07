@@ -153,14 +153,14 @@
         <div class="rem-name-div">
           <input type="text" id="rem-name" pattern="[\w\W\d\D\s]{1,15}" data-toggle="tooltip" data-placement="top"
             title="English alphabet only, 3-15 characters" required>
-          <label for="rem-name">Project Title</label>
+          <label for="rem-name">Reminder <Title></Title></label>
         </div>
         <br>
         <div class="pad-under">
         <span class="date-q">Add a Date?</span>
         <br>
           <label class="radio-inline">Yes
-            <input type="radio" name="optradio">
+            <input type="radio" name="optradio" required>
             <span class="checkmark"></span>
           </label>
           <label class="radio-inline">No
@@ -177,7 +177,7 @@
           </div>
         </div>
 
-        <div class="error-msg" id="error-registration"></div>
+        <div class="error-msg"></div>
 
         <input type="submit" class="popup-buttons confirm" value="Create" id="create-button">
         <input type="reset" class="popup-buttons cancel" value="Cancel">
