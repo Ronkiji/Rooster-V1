@@ -240,14 +240,14 @@ body, html {
     margin: 20px;
     word-wrap: break-word;
     font-size: 0.75vw;
+    color: #AAA;
     font-style: italic;
-    font-weight: bold;
-    color: #bc2626;
+    font-size: 15px;
   }  
   
   /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: #AAA;
     float: right;
     font-size: 28px;
     font-weight: bold;

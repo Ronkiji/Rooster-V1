@@ -115,16 +115,25 @@ ul a:hover:not(.logo-link),
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
+.dropdown-content button {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: none;
+  background-color: #600f79;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
 
-.dropdown-content a:hover {
-  background-color: #752b8b;
+.dropdown-content button:hover {
+  transition: ease-in-out .2s;
+  background-color: #B142D3;
 }
 
 .dropdown:hover .dropdown-content {
@@ -219,4 +228,121 @@ ul a:hover:not(.logo-link),
   #check:checked ~ ul{
     left: 0;
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content-nav {
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+
+/* The Modal (background) */
+.modal-nav {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content-nav {
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  margin: 120px auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  min-width: 300px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content-nav h1 {
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom:15px;
+  font-size: 25px;
+}
+
+.modal-content-nav p {
+  color: #AAA;
+}
+
+.nav-text {
+  width: 80%;
+  border: 0;
+  outline: 0;
+  padding: 0.45rem 0;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+}
+
+nav .error-msg{
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: #AAA;
+  font-style: italic;
+  font-size: 15px;
+}  
+
+/* The Close Button */
+.close-nav {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-nav:hover,
+.close-nav:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-buttons-nav{
+  font-size: 90%;
+  font-weight: 700;
+  width: 40%;
+  margin: 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  color: #AAA;
+}
+
+.confirm-nav {
+  background-color: #8833a2;
+  color: white;
 }
