@@ -42,22 +42,33 @@ function toggleEdit(argument) {
     }
 }
 
-// Get the modal
-var modal = document.getElementById("new-reminder-modal");
+function configurePopupBtn(popup_id, btn_id) {
+    
+    // Get the modal
+    const modal = document.getElementById(popup_id);
 
-// Get the button that opens the modal
-var btn = document.getElementById("modal-button");
+    // Get the button that opens the modal
+    const btn = document.getElementById(btn_id);
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    const span = modal.getElementsByClassName("close")[0];
+    const cancel = modal.getElementsByClassName("cancel")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-    modal.className = "modal animated fadeInDown";
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+        modal.className = "modal animated fadeInDown";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.className = "modal animated fadeOutUp";
+    }
+    cancel.onclick = function () {
+        modal.className = "modal animated fadeOutUp";
+    }
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.className = "modal animated fadeOutUp";
-}
+configurePopupBtn("new-reminder-modal", "modal-button");
+configurePopupBtn("save-modal", "save-button");
+configurePopupBtn("button-modal", "rembut-button");

@@ -276,3 +276,12 @@ body, html {
         height: 180px;
     }
 }
+
+  /* IF NO DATE */
+
+.date-display i {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 45px;
+}   

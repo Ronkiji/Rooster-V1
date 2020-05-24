@@ -156,3 +156,15 @@
     background-color: #600f79;
     color: white;
 }
+
+.checked-but i {
+    color: white;
+}
+
+/* NO DATE */
+.date-display i {
+    position: absolute;
+    top: 12px;
+    right: 14.5px;
+    font-size: 40px;
+}   

@@ -171,7 +171,7 @@ iframe{
 .title {
     position: absolute;
     top: 72px;
-    z-index: 999;
+    z-index: 1;
     height: 50px;
 }
 
@@ -186,6 +186,7 @@ iframe{
 }
 
 .title h1 {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 50px;
@@ -446,7 +447,7 @@ iframe{
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 999; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -669,6 +670,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
     color: #bc2626;
   }  
 
+  #save-modal p {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
 
   /* IF NO DATE */
 .date-display i {
@@ -687,4 +693,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:focus {
 .reminder-info-2 h2 {
     font-weight: normal;
     font-size: 25px;
+}
+
+.completed h2 {
+    color: #8a8a8a;
+}
+
+.completed .checked-but {
+    background-color: #600f79;
+    cursor: default;
+    pointer-events: none;
+}
+
+.checked-but i {
+    color: white; 
 }
