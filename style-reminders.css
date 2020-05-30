@@ -20,7 +20,7 @@
     height: 760px;
     width: 930px;
     left: 20px;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
     padding: 0 20px;
 }

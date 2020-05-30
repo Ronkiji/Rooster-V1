@@ -334,7 +334,7 @@ iframe{
     top: 120px;
     height: 830px;
     width: 760px;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
     padding: 0 20px;
 }
