@@ -1,0 +1,173 @@
+.div-label {
+    position: absolute;
+    top: 90px;
+    font-size: 60px
+}
+
+.upcoming .div-label {
+    left: 68px;
+}
+
+.completed .div-label {
+    left: 989px;
+}
+
+.size {
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    position: absolute;
+    top: 170px;
+    height: 760px;
+    width: 930px;
+    left: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+.completed .size {
+    left: 940px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #8833a2;
+}
+
+.in-display {
+    position: relative;
+    margin: 20px auto;
+    width: 810px;
+    height: 95px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.buttons {
+    position: relative;
+    right: 15px;
+    float: right;
+}
+
+.buttons button {
+    border: 2px solid #600f79;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.buttons i {
+    font-size: 20px;
+    color: #600f79;
+}
+
+.buttons button, 
+.buttons img {
+    position: relative;
+    top: 7px;
+    width: 46px;
+    height: 46px;
+    margin: 0 6px;
+}
+
+.buttons img{
+    width: 46px;
+    height: 46px;
+    position: relative;
+    top: 23px;
+}
+
+.buttons button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(108%);
+    cursor: pointer;
+}
+
+.date-display{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #8833a2;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.date-display h3 {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 2px 0 0 10px;
+    padding-bottom: 0;
+}
+
+.date-display span {
+    position: relative;
+    font-size: 40px;
+    right: 1px;
+    padding: 10px;
+    bottom: 10px;
+    font-weight: 700;
+}
+
+.reminder-info {
+    display: inline-block;
+    position: relative;
+    top: 9px;
+    line-height: 36px;
+    padding-left: 40px;
+}
+
+.reminder-info h2{
+    font-size: 28px;
+    font-weight: normal;
+}
+
+
+.reminder-info p{
+    position: relative;
+    bottom: 5px;
+    font-size: 15px;
+    font-style: oblique;
+    color: #8a8a8a
+}
+
+.completed h2 {
+    color: #8a8a8a;
+}
+
+.completed .checked-but {
+    background-color: #600f79;
+    cursor: default;
+    pointer-events: none;
+}
+
+.completed h2 {
+    color: #8a8a8a;
+}
+
+.checked-but i {
+    color: white;
+}
+
+/* NO DATE */
+.date-display i {
+    position: absolute;
+    top: 12px;
+    right: 14.5px;
+    font-size: 40px
