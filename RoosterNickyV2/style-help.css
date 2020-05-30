@@ -8,17 +8,13 @@
   src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
 }
 
-@font-face {
-  font-family: Cabin;
-  src: url(https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap);
-}
-
 body, html {
   height: 100%;
   width: 100%;
   font-family:  Ebrima, Helvetica, sans-serif;
   scroll-behavior: smooth;
-  background-color: #fbfafc;
+  background-color: var(--main-bg-light);
+  color: var(--main-text-light);
 }
 
 .top {
@@ -58,11 +54,11 @@ body, html {
   display: inline-block;
   width: 200px;
   height: 150px;
-  background-color: white;
+  background-color: var(--card-bg-light);
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.178);
   text-decoration: none;
-  color: black;
+  color: var(--main-text-light);
 }
 
 .anchor-box a:hover {
@@ -79,7 +75,7 @@ body, html {
 .anchor-box a h3 {
   font-weight: 500;
   font-size: 18px;
-  color: #291d40;
+  color: var(--alt-text-color);
 }
 
 .stack {
@@ -90,7 +86,7 @@ body, html {
   position: relative;
   top: 530px;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: var(--bg-switch);
 }
 
 .col-container h1 {
@@ -109,8 +105,8 @@ body, html {
 
 .accordion {
   font-weight: 600;
-  background-color: white;
-  color: #291d40;
+  background-color: var(--card-bg-light);
+  color: var(--alt-text-color);
   cursor: pointer;
   padding: 18px;
   width: 900px;
@@ -120,19 +116,19 @@ body, html {
   font-size: 15px;
   transition: 0.4s;
   position: relative;
-  border-bottom: solid 2px #f0f0f0;
+  border-bottom: solid 2px var(--extra-border1);
   line-height: 23px;
 }
 
 .active, .accordion:hover {
-  color: #600f79; /* OR 8833a2*/
-  border-bottom: solid 2px #600f79;
+  color: var(--extra-purp2); /* OR 8833a2*/
+  border-bottom: solid 2px var(--extra-purp2);
 }
 
 .accordion:after {
   content: '\002B';
   font-size: 20px;
-  color: #777;
+  color: var(--alt-text-color);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -144,7 +140,7 @@ body, html {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: var(--card-bg-light);
   max-height: 0;
   word-wrap: break-word;
   overflow: hidden;
@@ -160,7 +156,7 @@ body, html {
 }
 
 .panel a {
-  color: #600f79; 
+  color: var(--extra-purp3); 
 }
 
 .pad {
@@ -192,7 +188,7 @@ body, html {
   display: inline-block;
   width: 410px;
   height: 200px;
-  background-color: white;
+  background-color: var(--card-bg-light);
   margin: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.178);
   text-align: left;
@@ -230,7 +226,7 @@ body, html {
 .nav-sec {
   width: 100%;
   height: 500px;
-  background-color: #f5f5f5;
+  background-color: var(--bg-switch);
   position: relative;
   top: 540px;
   text-align: center;
@@ -338,7 +334,6 @@ img {
 
 .pro-sec {
   width: 100%;
-  background-color: #fbfafc;
   height: 1320px;
   position: relative;
   top: 540px;
@@ -368,7 +363,7 @@ img {
   font-size: 31px;
   font-weight: bold;
   color: white;
-  background-color: #8833a2;
+  background-color: var(--main-l-purp-light);
   text-align: center;
   display: inline-block;
   vertical-align: middle;
@@ -391,7 +386,7 @@ img {
 }
 
 .rem {
-  background-color: #f5f5f5;
+  background-color: var(--bg-switch);
   width: 100%;
   height: 950px;
   position: relative;
@@ -403,6 +398,7 @@ img {
 
 .rem h1 {
   font-size: 35px;
+  padding-top: 25px;
   padding-bottom: 10px;
 }
 
@@ -423,6 +419,7 @@ img {
   border-radius: 100px;
   border: 5px solid #600f79;
   margin: 34px 0 20px;
+  background-color: var(--bg-color-fill);
 }
 
 #od {
@@ -430,6 +427,7 @@ img {
   padding: none;
   border-radius: 0;
   border: none;
+  background-color: none;
 }
 
 .rem .section p {
@@ -439,7 +437,7 @@ img {
 .developers{
   margin-top: 50px;
   padding: 50px;
-  background-color: #fbfafc;
+  background-color: var(--main-bg-light);
 }
 
 .developers .title h1 {
@@ -473,7 +471,7 @@ img {
 
 .developers .dev div a{
   text-decoration: none;
-  color: #600f79;
+  color: var(--extra-purp3);
   padding-top: 5px;
 }
 

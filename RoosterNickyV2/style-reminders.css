@@ -32,18 +32,18 @@
 .scrollbar::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
-    background-color: #F5F5F5;
+    background-color: var(--scrollbar-light);
 }
 
 .scrollbar::-webkit-scrollbar {
     width: 12px;
-    background-color: #F5F5F5;
+    background-color: var(--scrollbar-light);
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #8833a2;
+    background-color: var(--main-l-purp-light);
 }
 
 .in-display {
@@ -63,14 +63,14 @@
 }
 
 .buttons button {
-    border: 2px solid #600f79;
-    background-color: white;
+    border: 2px solid var(--main-l-purp-dark);
+    background-color: var(--card-bg-light);
     border-radius: 100px;
 }
 
 .buttons i {
     font-size: 20px;
-    color: #600f79;
+    color: var(--main-l-purp-dark);
 }
 
 .buttons button, 
@@ -101,7 +101,7 @@
     position: relative;
     top: 15px;
     left: 15px;
-    background-color: #8833a2;
+    background-color: var(--main-l-purp-light);
     width: 65px;
     height: 65px;
     border-radius: 15px;
@@ -145,15 +145,15 @@
     bottom: 5px;
     font-size: 15px;
     font-style: oblique;
-    color: #8a8a8a
+    color: var(--main-p-text-light);
 }
 
 .completed h2 {
-    color: #8a8a8a;
+    color: var(--main-p-text-light);
 }
 
 .completed .checked-but {
-    background-color: #600f79;
+    background-color: var(--extra-purp3);
     color: white;
 }
 
