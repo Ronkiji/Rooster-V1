@@ -3,8 +3,6 @@
     padding: 0;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
-
 @font-face {
     font-family: Ebrima;
     src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
@@ -15,7 +13,7 @@ body, html {
     width: 100%;
     font-family:  Ebrima, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    background-color: #fbfafc;
+    background-color: var(--main-bg-light);
 }
 
 .projects-div {
@@ -30,25 +28,26 @@ body, html {
     position: relative;
     font-size: 60px;
     width: 1000px;
+    color: var(--main-text-light);
 }
 
 .size {
     margin-top: 15px;
-    height: 730px;
+    height: 75.5vh;
     width: 850px;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
 }
 
 .scrollbar::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
-    background-color: #F5F5F5;
+    background-color: var(--scrollbar-light);
 }
 
 .scrollbar::-webkit-scrollbar {
     width: 12px;
-    background-color: #F5F5F5;
+    background-color: transparent;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
@@ -58,15 +57,15 @@ body, html {
 }
 
 .proj a{
-    color: black;
+    color: var(--main-text-light);
     cursor: pointer; 
     width: 51%;
     height: 20px;
 }
 
 .proj button {
-    border: 2px solid #600f79;
-    background-color: white;
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
     width: 55px;
     height: 55px;
     padding: 8px;
@@ -81,7 +80,7 @@ body, html {
 
 .proj button i {
     font-size: 30px;
-    color: #600f79;
+    color: var(--dark-purp1);
 }
 
 .proj button:hover {
@@ -96,7 +95,7 @@ body, html {
     width: 810px;
     height: 105px;
     border-radius: 20px;
-    background-color: white;
+    background-color: var(--card-bg-light);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
@@ -107,7 +106,7 @@ body, html {
 .project-color {
     height: 65px;
     width: 65px;
-    background-color: #8833a2;
+
     border-radius: 100px;
     position: relative;
     top: 20px;
@@ -138,20 +137,23 @@ body, html {
     top: 190px;
     left: 950px;
     width: 45%;
-    height: 750px;
+    height: 75.5vh;
 }
 
 .interaction-option {
     display: block;
     position: relative;
     width: 100%;
-    height: 190px;
+    height: 19.3vh;
+    min-height: 160px;
     padding: 10px 20px;
     text-align: left;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.329);
     text-decoration: none;
     margin-bottom: 50px;
     cursor: pointer;
+    color: var(--main-text-light);
+    top: 8px;
 }
 
 .interaction-option h2 {
@@ -178,15 +180,15 @@ body, html {
 }
 
 .create-new-display {
-    background-image: url(assets/New_Display_BG.png);
+    background-image: var(--new-proj);
 }
 
 .help-page-display {
-    background-image: url(assets/Help_Display_BG.png);
+    background-image: var(--help-big);
 }
 
 .dark-mode-display{
-    background-image: url(assets/Dark_Display_BG.png);
+    background-image: var(--dark-light);
     color: white;
     margin-bottom: 0px;
 }
@@ -217,7 +219,7 @@ body, html {
 .modal-content {
     text-align: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--card-bg-light);
     margin: 120px auto; /* 15% from the top and centered */
     padding: 20px;
     border: none;
@@ -232,20 +234,21 @@ body, html {
     margin-top: 25px;
     margin-bottom: 45px;
     font-size: 25px;
+    color: var(--main-text-light);
 }
 
 .error-msg{
-    margin: 20px;
-    word-wrap: break-word;
-    font-size: 0.75vw;
-    color: #AAA;
-    font-style: italic;
-    font-size: 15px;
-  }  
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: var(--main-subtext-light);
+  font-style: italic;
+  font-size: 15px;
+}
   
   /* The Close Button */
 .close {
-    color: #AAA;
+    color: var(--main-subtext-light);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -253,7 +256,7 @@ body, html {
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: var(--main-text-light);
     text-decoration: none;
     cursor: pointer;
 }
@@ -265,7 +268,7 @@ body, html {
     padding: 0.45rem 0;
     text-align: center;
     font-size: 15px;
-    border-bottom: 2px solid #d3d3d3;
+    border-bottom: 2px solid var(--extra-border1);
     box-shadow: none;
     color: #111;
 }
@@ -274,7 +277,7 @@ body, html {
     position: absolute;
     left: -10px;
     width: 100%;
-    color: #AAA;
+    color: var(--main-subtext-light);
     cursor: text;
     font-size: 20px;
     transform: translate(0px, -38px);
@@ -282,7 +285,7 @@ body, html {
 
 .color-title {
     font-size: 20px;
-    color: #AAA;
+    color: var(--main-subtext-light);
     padding-bottom: 18px;
 }
 
@@ -427,20 +430,29 @@ label span.orange-yellow {
     border: none;
     border-radius: 100px;
     cursor: pointer;
-    color: #AAA;
+    color: var(--main-subtext-light);
 }
 
 .popup-buttons:hover{
     transition: ease-in-out .2s;
     filter: brightness(90%);
 }
-
-#create-button {
-    color: white;
+  
+.confirm {
     background-color: #8833a2;
+    color: white;
 }
 
-#create-button:hover {
+.modal-content input[type="text"]{
+    background-color: var(--card-bg-light);
+}
+  
+.modal-content input[type="reset"] {
+    background-color: var(--cancel-but);
+    color: var(--main-text-light);
+}
+
+.confirm:hover {
     transition: ease-in-out .2s;
     filter: brightness(110%);
 }
@@ -449,19 +461,29 @@ label span.orange-yellow {
     .popup-buttons {
       font-size: 100%;
     }
-  
-  
-  .confirm {
-    background-color: #8833a2;
-    color: white;
-   }
 }
 
 .project-title{
-    width: 550px;
+    width: 595px;
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
     position: relative;
     top: 14px;
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    position: relative;
+    left: 13px;
+    width: 95%;
+    height: 710px;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 19em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.219);
 }

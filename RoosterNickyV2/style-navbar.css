@@ -78,38 +78,48 @@ nav {
   float: left;
 }
 
-.navbar li a, .dropbtn {
+.navbar li a, 
+.navbar li button, 
+.dropbtn {
   display: block;
-  color: var(--overlay-text-light);
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
+.navbar li button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
 .dropdown-content {
   top: 72px;
   transition: background .3s;
-  background-color: var(--l-purp-hover-light);
   right: 0;
   display: inline-block;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+  background-color: var(--main-l-purp-dark);
 }
 
-ul a:hover:not(.logo-link), 
+ul a:hover:not(.logo-link),
+.navbar li button:hover:not(.logo-link),
 .dropdown-content a:hover {
   filter: brightness(130%);
   transition: all .3s ease;
+  cursor: pointer;
 }
 
-.navbar li.dropdown {
-  color: var(--main-text-light);
+
+.navbar li .dropdown {
+  color: black;
 }
 
 .navbar .dropdown-content {
   display: none;
   position: absolute;
-  color: var(--main-text-light);
-  background-color: var(--main-l-purp-dark);
+  color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -121,7 +131,7 @@ ul a:hover:not(.logo-link),
   width: 100%;
   background-color: none;
   background-color: var(--main-l-purp-dark);
-  color: var(--main-bg-light);
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -142,7 +152,7 @@ ul a:hover:not(.logo-link),
 
 .checkbtn{
   font-size: 30px;
-  color: var(--overlay-text-light);
+  color: white;
   float: left;
   line-height: 75px;
   margin-left: 25px;
@@ -186,7 +196,8 @@ ul a:hover:not(.logo-link),
     transition: all .3s;
   }
 
-  .navbar ul li a img{
+  .navbar ul li a img,
+  .navbar li button img{
     display: none;
   }
 
@@ -202,13 +213,15 @@ ul a:hover:not(.logo-link),
     order: 5;
   }
 
-  .navbar ul li a span{ 
+  .navbar ul li a span, 
+  .navbar li button span{ 
     line-height: 40px;
     font-size: 24px;
-    color: var(--overlay-text-light);
+    color: white;
   }
 
   .navbar ul li a:hover,
+  .navbar li button:hover,
   .dropdown:hover,
   .dropbtn {
     background: var(--main-l-purp-light);
@@ -227,6 +240,11 @@ ul a:hover:not(.logo-link),
 
   #check:checked ~ ul{
     left: 0;
+  }
+
+  .dm {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -287,10 +305,20 @@ ul a:hover:not(.logo-link),
   margin-top: 15px;
   margin-bottom:15px;
   font-size: 25px;
+  color: var(--main-text-light);
 }
 
 .modal-content-nav p {
   color: var(--main-subtext-light);
+}
+
+.modal-content-nav input[type="text"]{
+  background-color: var(--card-bg-light);
+}
+
+.modal-content-nav input[type="reset"] {
+  background-color: var(--cancel-but);
+  color: var(--main-text-light);
 }
 
 .nav-text {
@@ -301,7 +329,7 @@ ul a:hover:not(.logo-link),
   margin-top: 5px;
   text-align: center;
   font-size: 15px;
-  border-bottom: 2px solid var(--main-subtext-light);
+  border-bottom: 2px solid var(--extra-border1);
   box-shadow: none;
   color: var(--main-text-light);
 }
@@ -316,15 +344,15 @@ nav .error-msg{
 }  
 
 /* The Close Button */
-.close-nav {
+.close {
   color: var(--main-subtext-light);
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close-nav:hover,
-.close-nav:focus {
+.close:hover,
+.close:focus {
   color: var(--main-text-light);
   text-decoration: none;
   cursor: pointer;
@@ -339,10 +367,10 @@ nav .error-msg{
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  color: var(--main-subtext-light);
+  color: var(--main-subtext-ligh);
 }
 
 .confirm-nav {
-  background-color: var(--main-l-purp-light);
-  color: var(--overlay-text-light);
+  background-color: #8833a2;
+  color: white;
 }

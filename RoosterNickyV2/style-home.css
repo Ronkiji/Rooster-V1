@@ -35,7 +35,7 @@ body, html {
 .main-page a{
     display: inline-block;
     text-align: center;
-    color: var(--overlay-text-light);
+    color: white;
     background-color: var(--main-l-purp-light);
     text-decoration: none;
     padding: 15px 30px;
@@ -73,6 +73,7 @@ body, html {
     word-wrap: break-word;
     font-weight: normal;
     padding: 5px 15px;
+    color: var(--main-text-light);
 }
 
 .interaction-option{
@@ -81,7 +82,7 @@ body, html {
     border: none;
     top: 190px;
     width: 30%;
-    height: 220px;;
+    height: 220px;
     padding: 20px;
     margin: 0 2.5%;
     text-align: left;
@@ -115,12 +116,12 @@ body, html {
 }
 
 .dark-mode-display{
-    background-image: url(assets/Dark_Mode_Display.png);
-    color: var(--dark-display-overlay);
+    background-image: var(--dark-light-sml);
+    color: white;
 }
 
 .help-page-display{
-    background-image: url(assets/Help_Page_Display.png);
+    background-image: var(--help-sml);
     color: var(--main-text-light);
 }
 
@@ -157,20 +158,20 @@ body, html {
 
 .buttons {
     position: relative;
-    top: 10px;
+    top: 12px;
     right: 25px;
     float: right;
 }
 
 .buttons button {
-    border: 2px solid var(--main-l-purp-dark);
-    background-color: var(--card-bg-light);
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
     border-radius: 100px;
 }
 
 .buttons i {
     font-size: 26px;
-    color: var(--main-l-purp-dark);
+    color: var(--dark-purp1);
 }
 
 .buttons button, 
@@ -181,9 +182,12 @@ body, html {
 }
 
 .buttons img{
+	width: 55px;
+    height: 55px;
     position: relative;
-    top: 17px;
-    visibility: hidden;
+    top: 18px;
+    border:none;
+    outline:none;
 }
 
 .buttons button:hover {
@@ -197,7 +201,7 @@ body, html {
     position: relative;
     top: 15px;
     left: 15px;
-    background-color: var(--main-l-purp-light);
+    background-color: #6f2b90;
     width: 80px;
     height: 80px;
     border-radius: 15px;
@@ -278,10 +282,23 @@ body, html {
 }
 
   /* IF NO DATE */
-
 .date-display i {
     position: absolute;
     top: 16px;
     right: 20px;
     font-size: 45px;
-}   
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    width: 800px;
+    height: 505px;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 23em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.219);
+}

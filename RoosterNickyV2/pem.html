@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="">
 
 <head lang="en">
   <meta charset="UTF-8">
@@ -152,16 +152,15 @@
       </div>
 
       <div class="typo-emph div-section hilite">
-        <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);">
+        <input type="color" onchange="execCommandWithArg('foreColor', this.value);">
+        <input type="color" class="fcol" onchange="execCommandWithArg('hiliteColor', this.value);">
         <button onclick="execHilite('hiliteColor', false)"><i class="fas fa-eraser"></i></button>
       </div>
-
       <div class="typo-emph div-section">
         <button onclick="execCommandWithArg('insertImage', prompt('Enter the image URL',''));"><i
             class="fa fa-file-image-o"></i></button>
       </div>
       <div class="typo-emph div-section">
-        <button onclick="toggleSource();"><i class="fa fa-code"></i></button>
         <button id="save-button"><i class="fas fa-save"></i></button>
       </div>
     </div>
@@ -235,70 +234,7 @@
 
 <!--  -->
   <div class="size scrollbar">
-    <div class="in-display">
-      <div class="date-display">
-        <i class="far fa-calendar-minus"></i>
-      </div>
-      <div class="reminder-info-2">
-        <h2>WWWWWWWWWWWW</h2>
-      </div>
-      <div class="buttons">
-        <img src="assets/Overdue_Icon.png">
-        <button id="rembut-button"><i class="fa fa-check"></i></button>
-        <button><i class="far fa-trash-alt"></i></button>
-      </div>
-    </div>
-<!--  -->
-
-    <div class="in-display">
-      <div class="date-display">
-        <h3>Mo</h3>
-        <span>##</span>
-      </div>
-      <div class="reminder-info">
-        <h2>Reminder Title</h2>
-      </div>
-      <div class="buttons">
-
-        <img src="assets/Overdue_Icon.png">
-        <button id="rembut-button"><i class="fa fa-check"></i></button>
-        <button><i class="far fa-trash-alt"></i></button>
-      </div>
-    </div>
-
-
-    <div class="completed">
-      <div class="in-display">
-        <div class="date-display">
-          <h3>Mo</h3>
-          <span>##</span>
-        </div>
-        <div class="reminder-info">
-          <h2>Reminder Title</h2>
-        </div>
-        <div class="buttons">
-  
-          <img src="assets/Overdue_Icon.png">
-          <button  class="checked-but"><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-
-      <div class="in-display">
-        <div class="date-display">
-          <i class="far fa-calendar-minus"></i>
-        </div>
-        <div class="reminder-info-2">
-          <h2>WWWWWWWWWWWW</h2>
-        </div>
-        <div class="buttons">
-          <img src="assets/Overdue_Icon.png">
-          <button class="checked-but"><i class="fa fa-check"></i></button>
-          <button><i class="far fa-trash-alt"></i></button>
-        </div>
-      </div>
-    </div>
-    
+    <div class="empty">Nothing has been added yet.</div>
   </div>
 
   <!-- COMPLETE/TRASH BUTTON MODAL -->

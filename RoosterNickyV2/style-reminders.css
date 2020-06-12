@@ -1,7 +1,8 @@
 .div-label {
     position: absolute;
     top: 90px;
-    font-size: 60px
+    font-size: 60px;
+    color: var(--main-text-light);
 }
 
 .upcoming .div-label {
@@ -20,7 +21,7 @@
     height: 760px;
     width: 930px;
     left: 20px;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
     padding: 0 20px;
 }
@@ -37,13 +38,13 @@
 
 .scrollbar::-webkit-scrollbar {
     width: 12px;
-    background-color: var(--scrollbar-light);
+    background-color: transparent;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: var(--main-l-purp-light);
+    background-color: #8833a2;
 }
 
 .in-display {
@@ -52,7 +53,7 @@
     width: 810px;
     height: 95px;
     border-radius: 20px;
-    background-color: white;
+    background-color: var(--card-bg-light);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
 }
 
@@ -63,14 +64,14 @@
 }
 
 .buttons button {
-    border: 2px solid var(--main-l-purp-dark);
-    background-color: var(--card-bg-light);
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
     border-radius: 100px;
 }
 
 .buttons i {
     font-size: 20px;
-    color: var(--main-l-purp-dark);
+    color: var(--dark-purp1);
 }
 
 .buttons button, 
@@ -87,7 +88,6 @@
     height: 46px;
     position: relative;
     top: 23px;
-    visibility: hidden;
 }
 
 .buttons button:hover {
@@ -101,7 +101,7 @@
     position: relative;
     top: 15px;
     left: 15px;
-    background-color: var(--main-l-purp-light);
+    background-color: #8833a2;
     width: 65px;
     height: 65px;
     border-radius: 15px;
@@ -132,6 +132,7 @@
     top: 9px;
     line-height: 36px;
     padding-left: 40px;
+    color: var(--main-text-light);
 }
 
 .reminder-info h2{
@@ -145,7 +146,7 @@
     bottom: 5px;
     font-size: 15px;
     font-style: oblique;
-    color: var(--main-p-text-light);
+    color: var(--completed-header);
 }
 
 .completed h2 {
@@ -153,12 +154,17 @@
 }
 
 .completed .checked-but {
-    background-color: var(--extra-purp3);
-    color: white;
+    background-color: var(--bg-complete);
+    cursor: default;
+    pointer-events: none;
+}
+
+.completed h2 {
+    color: var(--completed-header);
 }
 
 .checked-but i {
-    color: white;
+    color: var(--wht-purp);
 }
 
 /* NO DATE */
@@ -167,4 +173,19 @@
     top: 12px;
     right: 14.5px;
     font-size: 40px;
-}   
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 19em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.219);
+}
